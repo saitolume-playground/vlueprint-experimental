@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "declaration": true,
+    "lib": ["esnext"],
+    "module": "commonjs",
+    "outDir": "dist",
+    "paths": {
+      "*": ["types/*"]
+    },
+    "strict": true,
+    "target": "ES2015"
+  },
+  "exclude": ["src/*.test.ts", "node_modules"]
+}

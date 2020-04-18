@@ -1,0 +1,12 @@
+@base <https://vlueprint.org/resource/> .
+
+@prefix vlueprint: <https://vlueprint.org/schema/>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+
+<キズナアイ> a vlueprint:VirtualBeing;
+    rdfs:label "キズナアイ";
+    vlueprint:youtubeChannelId "UC4YaOt1yT-ZeyB0OmxHgolA";
+    vlueprint:youtubeChannelName "A.I.Channel";
+    vlueprint:twitterAccount "aichan_nel";
+    vlueprint:office "upd8".
