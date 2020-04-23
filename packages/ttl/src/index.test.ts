@@ -24,4 +24,8 @@ describe('TTL', () => {
     ttl.update(virtualBeing, { twitterAccount: 'test' })
     expect(ttl.find('キズナアイ').twitterAccount).toBe('test')
   })
+
+  it ('should find all virtual beings', () => {
+    expect(ttl.findAll()).toBeDefined()
+  })
 })

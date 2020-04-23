@@ -10,3 +10,31 @@
     vlueprint:youtubeChannelName "A.I.Channel";
     vlueprint:twitterAccount "aichan_nel";
     vlueprint:office "upd8".
+
+<キズナアイ(ゲーム)> a vlueprint:VirtualBeing;
+    rdfs:label "キズナアイ(ゲーム)";
+    vlueprint:youtubeChannelId "UCbFwe3COkDrbNsbMyGNCsDg";
+    vlueprint:youtubeChannelName "A.I.Games";
+    vlueprint:twitterAccount "aichan_nel";
+    vlueprint:office "upd8".
+
+<輝夜月(かぐやるな)> a vlueprint:VirtualBeing;
+    rdfs:label "輝夜月(かぐやるな)";
+    vlueprint:youtubeChannelId "UCQYADFw7xEJ9oZSM5ZbqyBw";
+    vlueprint:youtubeChannelName "Kaguya Luna Official";
+    vlueprint:twitterAccount "_KaguyaLuna";
+    vlueprint:office "VIC".
+
+<ミライアカリ> a vlueprint:VirtualBeing;
+    rdfs:label "ミライアカリ";
+    vlueprint:youtubeChannelId "UCMYtONm441rBogWK_xPH9HA";
+    vlueprint:youtubeChannelName "Mirai Akari Project";
+    vlueprint:twitterAccount "MiraiAkari_prj";
+    vlueprint:office "元ENTUM".
+
+<電脳少女シロ> a vlueprint:VirtualBeing;
+    rdfs:label "電脳少女シロ";
+    vlueprint:youtubeChannelId "UCLhUvJ_wO9hOvv_yYENu4fQ";
+    vlueprint:youtubeChannelName "Siro Channel";
+    vlueprint:twitterAccount "SIROyoutuber";
+    vlueprint:office ".LIVE".
