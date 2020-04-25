@@ -65,22 +65,24 @@ export class TTL<V extends { [key: string]: string } = any> {
   findAll() {
     const quads = this.#store.getQuads()
     let value = { label: quads[0].subject.id.replace(this.base, '') }
+
     return quads
       .map((quad, index, array) => {
-        if (quad.subject.id !== array[index + 1]?.subject?.id) {
-          const prevValue = value
-          value = { label: array[index + 1]?.subject?.id?.replace(this.base, '') }
-          return prevValue
+        if (quad.predicate.id.includes(this.prefixes.vlueprint)) {
+          value = {
+            ...value,
+            [quad.predicate.id.replace(
+              this.prefixes.vlueprint,
+              ''
+            )]: quad.object.id.replace(/"/g, ''),
+          }
         }
 
-        if (!quad.predicate.id.includes(this.prefixes.vlueprint)) return
-
-        value = {
-          ...value,
-          [quad.predicate.id.replace(
-            this.prefixes.vlueprint,
-            ''
-          )]: quad.object.id.replace(/"/g, ''),
+        const nextQuadSubjectId = array[index + 1]?.subject?.id
+        if (quad.subject.id !== nextQuadSubjectId) {
+          const prevValue = value
+          value = { label: nextQuadSubjectId?.replace(this.base, '') }
+          return prevValue
         }
       })
       .filter((value) => !!value)
