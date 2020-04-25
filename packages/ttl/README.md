@@ -7,7 +7,7 @@ JavaScript libraly that parse and update `.ttl` file for [vlueprint](https://vlu
 ```ts
 import { promises as fs } from 'fs'
 import { resolve } from 'path'
-import { TTL } from '.'
+import { TTL } from 'path-to-TTL'
 
 const file = await fs.readFile(resolve('sample.ttl'), 'utf-8')
 const ttl = new TTL(file)
@@ -20,6 +20,15 @@ const kizunaAi = ttl.find('キズナアイ')
 //   twitterAccount: 'aichan_nel',
 //   office: 'upd8'
 // }
+
+const kizunaAi = ttl.findAll()
+// [{
+//   label: 'キズナアイ',
+//   youtubeChannelId: 'UC4YaOt1yT-ZeyB0OmxHgolA',
+//   youtubeChannelName: 'A.I.Channel',
+//   twitterAccount: 'aichan_nel',
+//   office: 'upd8'
+// }, ...]
 
 ttl.update(kizunaAi, { twitterAccount: 'test' })
 const updatedLKizunaAi = ttl.find('キズナアイ')
